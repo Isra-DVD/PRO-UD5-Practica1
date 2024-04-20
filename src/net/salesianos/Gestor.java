@@ -1,7 +1,7 @@
 package net.salesianos;
 
 import java.util.ArrayList;
-
+import java.util.Collections;
 import javax.swing.JOptionPane;
 
 public class Gestor {
@@ -34,5 +34,14 @@ public class Gestor {
         Restaurante restaurante = new Restaurante(nombre, localizacion, horario, puntuacion);
         listaRestaurantes.add(restaurante);
         JOptionPane.showMessageDialog(null, "Restaurante añadido con exito");
+    }
+
+    public static void mostrarRestaurante() {
+        Collections.sort(listaRestaurantes,
+                (restaurante, otroRestaurante) -> Double.compare(otroRestaurante.getPuntuacion(),
+                        restaurante.getPuntuacion()));
+        for (Restaurante restaurante : listaRestaurantes) {
+            JOptionPane.showMessageDialog(null, restaurante);
+        }
     }
 }
