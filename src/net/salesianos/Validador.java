@@ -9,4 +9,12 @@ public class Validador {
             return false;
         }
     }
+
+    public static boolean noNulo(String texto) {
+        if (texto != null) {
+            return true;
+        } else {
+            return false;
+        }
+    }
 }
