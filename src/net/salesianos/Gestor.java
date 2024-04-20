@@ -10,19 +10,24 @@ public class Gestor {
 
     public static void agregarRestaurante() {
 
-        int puntuacion;
+        int puntuacion = -1;
         String nombre = JOptionPane.showInputDialog("Introduce el nombre del restaurante");
         String localizacion = JOptionPane.showInputDialog("Introduce la localizacion del restaurante");
         String horario = JOptionPane.showInputDialog("Introduce el horario del restaurante");
 
         while (true) {
             String puntuacionStr = JOptionPane
-                    .showInputDialog("Introduce la valoración del restaurante como número entero");
+                    .showInputDialog("Introduce la valoración del restaurante como número entero del 0 al 100");
             if (Validador.esNumero(puntuacionStr)) {
                 puntuacion = Integer.parseInt(puntuacionStr);
-                break;
+
+                if (puntuacion >= 0 && puntuacion <= 100) {
+                    break;
+                } else {
+                    JOptionPane.showMessageDialog(null, "La valoración debe ser un número entero del 0 al 100");
+                }
             } else {
-                JOptionPane.showMessageDialog(null, "La puntuación debe ser entero");
+                JOptionPane.showMessageDialog(null, "La valoración debe ser un número entero del 0 al 100");
             }
         }
 
