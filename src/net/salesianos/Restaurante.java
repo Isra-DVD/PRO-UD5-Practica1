@@ -49,8 +49,8 @@ public class Restaurante {
     public String toString() {
         return "\nRestaurante: \n" +
                 "Nombre = " + nombre + "\n" +
-                "Localización = " + localizacion +
-                "Horario = " + horario +
+                "Localización = " + localizacion + "\n" +
+                "Horario = " + horario + "\n" +
                 "Puntuación = " + puntuacion;
     }
 }
