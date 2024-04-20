@@ -45,9 +45,47 @@ public class Gestor {
         }
     }
 
-    public static void eliminarRestaurante(String nombre) {
+    public static void modificarRestaurante() {
+        String nombre = JOptionPane.showInputDialog("Introduce el nombre del restaurante que quieres modificar: ");
         for (Restaurante restaurante : listaRestaurantes) {
             if (restaurante.getNombre().equalsIgnoreCase(nombre)) {
+                String nuevoNombre = JOptionPane
+                        .showInputDialog("Introduce el nuevo nombre del restaurante:");
+                String nuevaLocalizacion = JOptionPane
+                        .showInputDialog("Introduce la nueva ubicación del restaurante:");
+                String nuevoHorario = JOptionPane
+                        .showInputDialog("Introduce el nuevo horario de apertura del restaurante:");
+                int nuevaPuntuacion;
+                while (true) {
+                    String puntuacionMensaje = JOptionPane
+                            .showInputDialog("Introduce la nueva puntuación que tiene el restaurante: ");
+                    if (Validador.esNumero(puntuacionMensaje)) {
+                        nuevaPuntuacion = Integer.parseInt(puntuacionMensaje);
+                        if (nuevaPuntuacion >= 0 && nuevaPuntuacion <= 100) {
+                            break;
+                        } else {
+                            JOptionPane.showMessageDialog(null, "La valoración debe ser un número entero del 0 al 100");
+                        }
+                        break;
+                    } else {
+                        JOptionPane.showInputDialog("La puntuación debe representarse en números enteros.");
+                    }
+                }
+                restaurante.setNombre(nuevoNombre);
+                restaurante.setLocalizacion(nuevaLocalizacion);
+                restaurante.setHorario(nuevoHorario);
+                restaurante.setPuntuacion(nuevaPuntuacion);
+                JOptionPane.showMessageDialog(null, "Restaurante modificado con exito.");
+                return;
+            }
+        }
+        JOptionPane.showInputDialog("El restaurante no se encuentra en la lista.");
+    }
+
+    public static void eliminarRestaurante() {
+        String nombreEliminar = JOptionPane.showInputDialog("Introduce el nombre del restaurante");
+        for (Restaurante restaurante : listaRestaurantes) {
+            if (restaurante.getNombre().equalsIgnoreCase(nombreEliminar)) {
                 listaRestaurantes.remove(restaurante);
             }
         }

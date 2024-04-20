@@ -19,7 +19,7 @@ public class App {
                         break;
 
                     case "2":
-
+                        Gestor.modificarRestaurante();
                         break;
 
                     case "3":
@@ -27,7 +27,7 @@ public class App {
                         break;
 
                     case "4":
-
+                        Gestor.eliminarRestaurante();
                         break;
 
                     case "Q":
