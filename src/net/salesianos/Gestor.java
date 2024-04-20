@@ -44,4 +44,12 @@ public class Gestor {
             JOptionPane.showMessageDialog(null, restaurante);
         }
     }
+
+    public static void eliminarRestaurante(String nombre) {
+        for (Restaurante restaurante : listaRestaurantes) {
+            if (restaurante.getNombre().equalsIgnoreCase(nombre)) {
+                listaRestaurantes.remove(restaurante);
+            }
+        }
+    }
 }
