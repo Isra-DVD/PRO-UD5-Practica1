@@ -68,7 +68,7 @@ public class Gestor {
                         }
                         break;
                     } else {
-                        JOptionPane.showInputDialog("La puntuación debe representarse en números enteros.");
+                        JOptionPane.showMessageDialog(null, "La puntuación debe representarse en números enteros.");
                     }
                 }
                 restaurante.setNombre(nuevoNombre);
@@ -79,7 +79,7 @@ public class Gestor {
                 return;
             }
         }
-        JOptionPane.showInputDialog("El restaurante no se encuentra en la lista.");
+        JOptionPane.showMessageDialog(null, "El restaurante no se encuentra en la lista.");
     }
 
     public static void eliminarRestaurante() {
@@ -87,6 +87,12 @@ public class Gestor {
         for (Restaurante restaurante : listaRestaurantes) {
             if (restaurante.getNombre().equalsIgnoreCase(nombreEliminar)) {
                 listaRestaurantes.remove(restaurante);
+                JOptionPane.showMessageDialog(null, "Restaurante eliminado con exito");
+                break;
+            } else {
+                JOptionPane.showMessageDialog(null,
+                        "El nombre que ha introducido no se encuentra dentro de la base de datos");
+                break;
             }
         }
     }
