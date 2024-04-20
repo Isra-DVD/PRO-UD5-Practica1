@@ -38,7 +38,7 @@ public class Gestor {
 
     public static void mostrarRestaurante() {
         Collections.sort(listaRestaurantes,
-                (restaurante, otroRestaurante) -> Double.compare(otroRestaurante.getPuntuacion(),
+                (restaurante, otroRestaurante) -> Integer.compare(otroRestaurante.getPuntuacion(),
                         restaurante.getPuntuacion()));
         for (Restaurante restaurante : listaRestaurantes) {
             JOptionPane.showMessageDialog(null, restaurante);
