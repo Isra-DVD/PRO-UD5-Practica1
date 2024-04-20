@@ -1,0 +1,17 @@
+Clase Menu: Esta clase contiene un método estático para imprimir el menu en la clase App.
+
+Clase Restaurante: Esta clase contiene los atributos propios de los restaurantes así como sus métodos de acceso correspondientes, el constructor para instanciar restaurantes y el toString.
+
+Clase Validador: En esta clase se encuentra el método esNumero que servirá para verificar que el valor que el usuario quiere introducir como puntuación del restaurante es un entero que se encuentra entre los parametros permitidos. También contiene el método noNulo que usaremos en la clase App para asegurar que al seleccionar cancelar en la interfaz gráfica el programa no finalice.
+
+Clase Gestor: En esta clase se crea la ArrayList en la que almacenaremos los restaurantes y también se encuentran los métodos que se usaran en la clase App para agregar, modificar, mostrar y eliminar restaurantes. 
+
+    Método añadirRestaurante: Este método solicita al usuario los datos del restaurante y se realizan las verificaciones pertinentes de los datos antes de instanciar el objeto restaurante y añadirlo a la lista de restaurantes. 
+
+    Método mostrarRestaurante: Este método ordena de manera inversa en base a la puntuacion todos los restaurantes y posteriormente mediante un bucle foreach imprime en la interfaz del usuario todos los restaurantes.
+
+    Método modificarRestaurante: Este método solicita el nombre del restaurante a modificar para posteriormente recorrer el array de restaurantes en busca del que se pretende modificar, en caso de encontrarlo se solicita todos los datos y se verifican los necesarios para posteriormente asignarle los nuevos atributos al restaurante a modificar.
+    
+    Método eliminarRestaurante: Este método solicita el nombre del usuario para recorrer el array en busca algun restaurante que tenga dicho nombre, en caso de encontrarlo eliminarlo de la lista.
+
+Clase App: Esta clase contiene un bucle e imprime el menú y solicita al usuario datos en función de lo que quiera hacer hasta que este quiera salir del programa.

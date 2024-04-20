@@ -1,0 +1,9 @@
+Una vez que se imprime el menu introducir "1" para añadir un restaurante, a continuacion introducir el nombre del restaurante, su localización, horario y puntuación. NOTA: La puntuación debe ser un número entero que se encuentre entre el 0 y el 100 ambos incluidos.
+
+Para modificar un restaurante se deberá introducir "2" y a continuacion introducir el nombre del restaurante a modificar, y en el siguiente orden introducir: nuevo nombre (Si no se quiere alterar introducir el mismo nombre), nueva localización, nuevo horario y por último la nueva puntuación.
+
+Para mostrar los restaurantes se introducirá un "3" y a continuacion de manera individual se irán mostrando todos los restaurantes con sus respectivas localizaciones, horario y puntuación.
+
+Para eliminar un restaurante se introducirá "4" y a continuacion el nombre del restaurante a modificar.
+
+Para salir del programa se deberá introducir "Q" y mostrará un mensaje de despedida y se finalizará el programa.
